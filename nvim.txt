@@ -1,0 +1,17 @@
+nvim導入の仕方
+
+packer.nvimのサイトに載っていた設定をplugin.luaに書く
+(エラーとなる設定があるためコメントアウトした)
+aptでインストールしたneovimのバージョンではpackerが動作しないためソースコードをmakeする方法でインストールした
+plugin.luaにcoc.nvimを記載
+:PackerInstallでインストール
+pythonが使用できなかったため、alias python='python3'をbashrcに追記
+yarnをインストールした(npm install -g yarn)
+pluginがあるディレクトリに移動しyarn install -> yarn build
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bashでnvmをインストール
+source ~/.bashrc
+nvm install 最新のnode.jsのバージョン
+cocで使いたい言語のランゲージサーバーをインストール
+
+CocInstall coc-pythonみたいな感じでインストール
+
