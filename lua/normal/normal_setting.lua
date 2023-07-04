@@ -1,5 +1,8 @@
---normal setting
+--leader
+vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', {noremap = true, silent = true})
 vim.g.mapleader = ' '
+
+--normal setting
 vim.opt.encoding = 'utf-8'
 vim.opt.history = 100
 vim.opt.cursorline = true
@@ -36,12 +39,16 @@ vim.opt.incsearch = true
 vim.opt.matchtime = 1
 vim.opt.winblend = 100
 vim.opt.pumblend = 100
-vim.opt.signcolumn = 'no'
+vim.opt.signcolumn = 'yes'
+
+vim.opt.ruler = true
 
 vim.cmd('syntax on')
+vim.cmd('highlight VertSplit cterm=none')
 vim.cmd('highlight Comment ctermfg=6')
 vim.cmd('set clipboard=unnamed,unnamedplus')
 
 vim.cmd('packadd! coc.nvim')
 vim.cmd('autocmd VimEnter * CocStart')
-vim.cmd('colorscheme codedark')
+vim.cmd('colorscheme tokyonight-night')
+vim.g['fern#renderer'] = 'nerdfont'

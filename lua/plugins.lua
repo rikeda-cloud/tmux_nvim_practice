@@ -17,14 +17,9 @@ return require('packer').startup(function(use)
 		opt = true,
 		requires = {{'hrsh7th/vim-vsnip', opt = true}, {'hrsh7th/vim-vsnip-integ', opt = true}}
 	}
-	-- use {
-		-- 'my/supercoolplugin',
-		-- rocks = {'lpeg', {'lua-cjson', version = '2.1.0'}}
-	-- }
 	use_rocks 'penlight'
 	use_rocks {'lua-resty-http', 'lpeg'}
 	use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
-	-- use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 	use {'glacambre/firenvim', run = function() vim.fn['firenvim#install'](0) end }
 	use {
 		'glepnir/galaxyline.nvim',
@@ -40,13 +35,25 @@ return require('packer').startup(function(use)
 	use {'tjdevries/colorbuddy.vim', {'nvim-treesitter/nvim-treesitter', opt = true}}
 	use {'dracula/vim', as = 'dracula'}
 
-
 	--add plugins
-	-- use {
-	-- 	'nvim-telescope/telescope.nvim',
-	-- 	tab = '0.1.2',
-	-- 	requires = { {'nvim-lua/plenary.nvim'} }
-	-- }
+	use {
+		'nvim-telescope/telescope.nvim',
+		tab = '0.1.2',
+		requires = { {'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'} }
+	}
+	use 'nvim-telescope/telescope-fzy-native.nvim'
+	
+	use 'airblade/vim-gitgutter'
+	use 'lambdalisue/fern-git-status.vim'
+	use 'echasnovski/mini.indentscope'
+	use 'folke/tokyonight.nvim'
+	use 'kdheepak/tabline.nvim'
+	use {
+		'nvim-lualine/lualine.nvim',
+		reqiures = {'nvim-tree/nvim-web-devicons', opt = true}
+	}
+	use 'tpope/vim-surround'
+	use 'junegunn/rainbow_parentheses.vim'
 	use 'ryanoasis/vim-devicons'
 	use 'beauwilliams/statusline.lua'
 	use 'tpope/vim-commentary'
@@ -70,5 +77,4 @@ return require('packer').startup(function(use)
 	  branch = 'release/remote',
 	  run = ':UpdateRemotePlugins'
 	}
-
 end)

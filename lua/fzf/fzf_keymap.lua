@@ -1,8 +1,8 @@
 --
 --coc extensions
 
-vim.api.nvim_set_keymap('n', '<Leader>f', ':<C-u>CocCommand fzf-preview.FromResources project_mru git<CR>', { silent = true })
-vim.api.nvim_set_keymap('x', '<Leader>f', ':<C-u>CocCommand fzf-preview.FromResources project_mru git<CR>', { silent = true })
+vim.api.nvim_set_keymap('n', 'fff', ':<C-u>CocCommand fzf-preview.FromResources project_mru git<CR>', { silent = true })
+vim.api.nvim_set_keymap('x', 'fff', ':<C-u>CocCommand fzf-preview.FromResources project_mru git<CR>', { silent = true })
 
 vim.api.nvim_set_keymap('n', '[fzf-p]p', ':<C-u>CocCommand fzf-preview.FromResources project_mru git<CR>', { silent = true })
 vim.api.nvim_set_keymap('n', '[fzf-p]gs', ':<C-u>CocCommand fzf-preview.GitStatus<CR>', { silent = true })
