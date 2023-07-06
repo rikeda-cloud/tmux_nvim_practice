@@ -1,5 +1,6 @@
 --normal keymap
 vim.api.nvim_set_keymap('n', 'wq', ':wq<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', 'ww', ':w<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', 'qq', ':q!<CR>', {noremap = true})
 vim.api.nvim_set_keymap('i', 'jj', '<ESC>', {noremap = true})
 vim.api.nvim_set_keymap('n', 'DD', ':%d<CR>', {noremap = true})

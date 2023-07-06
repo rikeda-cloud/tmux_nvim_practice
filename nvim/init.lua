@@ -11,11 +11,9 @@ require "fzf/fzf_keymap"
 require "telescope/telescope_setting"
 require "telescope/telescope_keymap"
 require "rainbow/rainbow_setting"
-require "indent/indent_setting"
+-- require "indent/indent_setting"
+-- require "closer/closer_setting"
 
 -- normal
 require "normal/normal_keymap"
-
--- lang
-require "normal/c_setting"
-require "normal/python_setting"
+require "gdb/gdb_setting"

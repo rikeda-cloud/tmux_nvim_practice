@@ -1,0 +1,40 @@
+{
+  "languageserver": {
+    "clangd": {
+      "command": "clangd",
+      "filetypes": ["c", "cpp", "python"],
+      "rootPatterns": [".ccls-root", "compile_commands.json"],
+      "initializationOptions": {
+         "cache": {
+           "directory": "/tmp/ccls-cache"
+         }
+       }
+    }
+  },
+  "suggest.completionItemKindLabels": {
+    "function": "function",
+    "method":"method",
+    "variable": "var",
+    "constant": "const",
+    "struct": "struct",
+    "class": "class",
+    "interface": "interface",
+    "text": "text",
+    "enum": "enum",
+    "enumMember": "enumMember",
+    "color": "color",
+    "property": "property",
+    "field": "field",
+    "unit": "unit",
+    "file": "file",
+    "value": "value",
+    "event": "event",
+    "folder": "folder",
+    "keyword": "keyword",
+    "snippet": "snippet",
+    "operator": "operator",
+    "reference": "reference",
+    "typeParameter": "type",
+    "default": "default"
+  },
+}
