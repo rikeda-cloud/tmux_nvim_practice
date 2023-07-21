@@ -27,7 +27,7 @@ vim.opt.mouse = 'a'
 vim.opt.swapfile = false
 vim.opt.wildmenu = true
 vim.opt.ruler = true
-
+vim.opt.clipboard:append({'unnamedplus'})
 --cursor
 vim.opt.cursorline = true
 -- vim.opt.cursorcolumn = true
@@ -39,7 +39,7 @@ vim.opt.whichwrap = 'b,s,h,l,<,>,~,[,]'
 vim.opt.number = true
 -- vim.opt.relativenumber = true
 
-vim.opt.background = 'light'
+vim.opt.background = 'dark'
 
 --search
 vim.opt.hlsearch = true
@@ -50,7 +50,11 @@ vim.opt.winblend = 20
 vim.opt.pumblend = 20
 
 --side column
-vim.opt.signcolumn = 'yes'
+-- vim.opt.signcolumn = 'yes'
+
+-- buffer
+local bufnr = vim.api.nvim_get_current_buf()
+vim.api.nvim_buf_set_option(bufnr, 'modifiable', true)
 
 
 vim.cmd('syntax on')
