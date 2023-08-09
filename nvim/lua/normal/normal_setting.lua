@@ -61,8 +61,6 @@ vim.cmd('syntax on')
 vim.cmd('highlight VertSplit cterm=none')
 vim.cmd('highlight Comment ctermfg=6')
 vim.cmd('set clipboard=unnamed,unnamedplus')
-
 vim.cmd('packadd! coc.nvim')
 vim.cmd('autocmd VimEnter * CocStart')
-vim.cmd('colorscheme tokyonight-night')
 vim.g['fern#renderer'] = 'nerdfont'

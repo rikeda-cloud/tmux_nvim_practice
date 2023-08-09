@@ -11,6 +11,7 @@ require "telescope/telescope_setting"
 require "telescope/telescope_keymap"
 require "rainbow/rainbow_setting"
 require "indent/indent_setting"
+require "tokyonight/tokyonight_setting"
 
 -- select
 -- require "gitsigns/gitsigns_setting"

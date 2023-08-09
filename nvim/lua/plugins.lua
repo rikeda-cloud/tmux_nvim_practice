@@ -81,10 +81,3 @@ return require('packer').startup(function(use)
 	-- HTMLなどの言語のサポート機能
 	use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
 end)
-
--- use 'airblade/vim-gitgutter'
-
--- 必要なモジュールのインストール。
--- use_rocks 'penlight'
--- use_rocks {'lua-resty-http', 'lpeg'}
-

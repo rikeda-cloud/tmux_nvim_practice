@@ -88,13 +88,6 @@ _G.packer_plugins = {
     path = "/home/rikeda/.local/share/nvim/site/pack/packer/start/coc.nvim",
     url = "https://github.com/neoclide/coc.nvim"
   },
-  ["completion-nvim"] = {
-    after = { "vim-vsnip-integ", "vim-vsnip" },
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/rikeda/.local/share/nvim/site/pack/packer/opt/completion-nvim",
-    url = "https://github.com/haorenw1025/completion-nvim"
-  },
   ["fern-git-status.vim"] = {
     loaded = true,
     path = "/home/rikeda/.local/share/nvim/site/pack/packer/start/fern-git-status.vim",
@@ -110,16 +103,6 @@ _G.packer_plugins = {
     path = "/home/rikeda/.local/share/nvim/site/pack/packer/start/fern.vim",
     url = "https://github.com/lambdalisue/fern.vim"
   },
-  fzf = {
-    loaded = true,
-    path = "/home/rikeda/.local/share/nvim/site/pack/packer/start/fzf",
-    url = "https://github.com/junegunn/fzf"
-  },
-  ["fzf-preview.vim"] = {
-    loaded = true,
-    path = "/home/rikeda/.local/share/nvim/site/pack/packer/start/fzf-preview.vim",
-    url = "https://github.com/yuki-yano/fzf-preview.vim"
-  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/rikeda/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -132,6 +115,11 @@ _G.packer_plugins = {
     only_cond = false,
     path = "/home/rikeda/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
+  },
+  ["mini.indentscope"] = {
+    loaded = true,
+    path = "/home/rikeda/.local/share/nvim/site/pack/packer/start/mini.indentscope",
+    url = "https://github.com/echasnovski/mini.indentscope"
   },
   ["nerdfont.vim"] = {
     loaded = true,
@@ -183,11 +171,6 @@ _G.packer_plugins = {
     path = "/home/rikeda/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
   },
-  ["vim-code-dark"] = {
-    loaded = true,
-    path = "/home/rikeda/.local/share/nvim/site/pack/packer/start/vim-code-dark",
-    url = "https://github.com/tomasiser/vim-code-dark"
-  },
   ["vim-commentary"] = {
     loaded = true,
     path = "/home/rikeda/.local/share/nvim/site/pack/packer/start/vim-commentary",
@@ -210,25 +193,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rikeda/.local/share/nvim/site/pack/packer/start/vim-surround",
     url = "https://github.com/tpope/vim-surround"
-  },
-  ["vim-vsnip"] = {
-    load_after = {
-      ["completion-nvim"] = true
-    },
-    loaded = false,
-    needs_bufread = true,
-    path = "/home/rikeda/.local/share/nvim/site/pack/packer/opt/vim-vsnip",
-    url = "https://github.com/hrsh7th/vim-vsnip"
-  },
-  ["vim-vsnip-integ"] = {
-    after_files = { "/home/rikeda/.local/share/nvim/site/pack/packer/opt/vim-vsnip-integ/after/plugin/vsnip_integ.vim" },
-    load_after = {
-      ["completion-nvim"] = true
-    },
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/rikeda/.local/share/nvim/site/pack/packer/opt/vim-vsnip-integ",
-    url = "https://github.com/hrsh7th/vim-vsnip-integ"
   }
 }
 
@@ -258,14 +222,14 @@ vim.cmd [[au!]]
 time([[Defining lazy-load filetype autocommands]], true)
 vim.cmd [[au FileType bash ++once lua require("packer.load")({'ale'}, { ft = "bash" }, _G.packer_plugins)]]
 vim.cmd [[au FileType sh ++once lua require("packer.load")({'ale'}, { ft = "sh" }, _G.packer_plugins)]]
-vim.cmd [[au FileType zsh ++once lua require("packer.load")({'ale'}, { ft = "zsh" }, _G.packer_plugins)]]
-vim.cmd [[au FileType c ++once lua require("packer.load")({'ale'}, { ft = "c" }, _G.packer_plugins)]]
+vim.cmd [[au FileType tex ++once lua require("packer.load")({'ale'}, { ft = "tex" }, _G.packer_plugins)]]
 vim.cmd [[au FileType vim ++once lua require("packer.load")({'ale'}, { ft = "vim" }, _G.packer_plugins)]]
 vim.cmd [[au FileType cmake ++once lua require("packer.load")({'ale'}, { ft = "cmake" }, _G.packer_plugins)]]
-vim.cmd [[au FileType tex ++once lua require("packer.load")({'ale'}, { ft = "tex" }, _G.packer_plugins)]]
+vim.cmd [[au FileType zsh ++once lua require("packer.load")({'ale'}, { ft = "zsh" }, _G.packer_plugins)]]
+vim.cmd [[au FileType c ++once lua require("packer.load")({'ale'}, { ft = "c" }, _G.packer_plugins)]]
+vim.cmd [[au FileType racket ++once lua require("packer.load")({'ale'}, { ft = "racket" }, _G.packer_plugins)]]
 vim.cmd [[au FileType html ++once lua require("packer.load")({'ale'}, { ft = "html" }, _G.packer_plugins)]]
 vim.cmd [[au FileType cpp ++once lua require("packer.load")({'ale'}, { ft = "cpp" }, _G.packer_plugins)]]
-vim.cmd [[au FileType racket ++once lua require("packer.load")({'ale'}, { ft = "racket" }, _G.packer_plugins)]]
 vim.cmd [[au FileType markdown ++once lua require("packer.load")({'ale'}, { ft = "markdown" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
   -- Event lazy-loads
