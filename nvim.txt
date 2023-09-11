@@ -15,3 +15,17 @@ cocで使いたい言語のランゲージサーバーをインストール
 
 CocInstall coc-pythonみたいな感じでインストール
 
+------------------------------------------------------------------
+git clone https://github.com/neovim/neovim.git
+sudo apt install -y ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip
+cd neovim
+make CMAKE_BUILD_TYPE=RelWithDebInfo
+sudo make install
+echo PATH=$PATH:/usr/local/bin
+
+-------------------------school-----------------------------------
+curl -LO https://github.com/neovim/neovim/releases/download/v0.5.0/nvim-macos.tar.gz
+tar xzvf nvim-macos.tar.gz
+mv XXX WWW
+echo export PATH="$PATH:/Users/rikeda/WWW/bin" >> .zshrc
+source .zshrc

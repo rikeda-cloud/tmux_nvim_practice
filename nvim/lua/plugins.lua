@@ -53,13 +53,13 @@ return require('packer').startup(function(use)
 	use 'lambdalisue/nerdfont.vim'
 
 	-- git side status
-	-- use {
-	-- 	'lewis6991/gitsigns.nvim',
-	-- 	requires = {
-	-- 		'nvim-lua/plenary.nvim'
-	-- 	},
-	-- 	config = function() require('gitsigns').setup() end
-	-- }
+	use {
+		'lewis6991/gitsigns.nvim',
+		requires = {
+			'nvim-lua/plenary.nvim'
+		},
+		config = function() require('gitsigns').setup() end
+	}
 
 	-- vscode -> neovim
 	use {
@@ -80,4 +80,16 @@ return require('packer').startup(function(use)
 
 	-- HTMLなどの言語のサポート機能
 	use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
+
+	-- logファイルのハイライトカラーの自動設定
+	use 'MTDL9/vim-log-highlighting'
+
+	-- SQLを記述し、SPACEを押すと自動でおおもじにしてくれる
+	use 'jorengarenar/vim-SQL-UPPER'
+
+	-- viのみの時のデフォルト画面のカスタム
+	use 'goolord/alpha-nvim'
+
+	-- 42header
+	use '42Paris/42header'
 end)
