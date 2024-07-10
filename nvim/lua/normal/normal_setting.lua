@@ -56,7 +56,6 @@ vim.opt.pumblend = 20
 local bufnr = vim.api.nvim_get_current_buf()
 vim.api.nvim_buf_set_option(bufnr, 'modifiable', true)
 
-
 vim.cmd('syntax on')
 vim.cmd('highlight VertSplit cterm=none')
 vim.cmd('highlight Comment ctermfg=6')

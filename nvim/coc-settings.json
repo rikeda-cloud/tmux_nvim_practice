@@ -16,10 +16,37 @@
 				}
 			}
 		},
-		"python": {
-			"command": "pyright-langserver",
+		"pyright": {
+			"enabled": false
+		},
+		"tsserver": {
+			"enabled": false
+		},
+		"rust": {
+			"command": "rust-analyzer",
 			"filetypes": [
-				"python"
+				"rust"
+			],
+			"rootPatterns": [
+				"Cargo.toml"
+			]
+		}
+		"html": {
+			"command": "html-languageserver",
+			"args": [
+				"--stdio"
+			],
+			"filetypes": [
+				"html"
+			]
+		},
+		"css": {
+			"command": "css-languageserver",
+			"args": [
+				"--stdio"
+			],
+			"filetypes": [
+				"css"
 			]
 		}
 	},
@@ -49,10 +76,15 @@
 		"typeParameter": "type",
 		"default": "default"
 	},
-	//	"coc.preferences.formatOnSave": true,
+	"coc.preferences.formatOnSave": true, // formatter setting
 	"coc.preferences.silentAutoupdate": true,
 	"python.formatting.provider": "autopep8",
 	"python.linting.enabled": true,
 	"python.linting.pylintEnabled": false,
-	"python.linting.flake8Enabled": true
+	"python.linting.flake8Enabled": true,
+	"ruff.enable": false,
+	"inlayHint.enable": false,
+	"rust-analyzer.linkedProjects": [
+		"./Cargo.toml"
+	]
 }

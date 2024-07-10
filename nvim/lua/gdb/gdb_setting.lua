@@ -15,4 +15,4 @@ packadd_termdebug()
 nvim_set_var("termdebug_wide", 163)
 
 -- keymap
-vim.api.nvim_set_keymap('n', '<Leader>gdb', ':TermdebugCommand ', {noremap = true})
+vim.api.nvim_set_keymap('n', '<Leader>dbg', ':TermdebugCommand ', {noremap = true})

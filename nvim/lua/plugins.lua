@@ -78,9 +78,6 @@ return require('packer').startup(function(use)
 		config = 'vim.cmd[[ALEEnable]]'
 	}
 
-	-- HTMLなどの言語のサポート機能
-	use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
-
 	-- logファイルのハイライトカラーの自動設定
 	use 'MTDL9/vim-log-highlighting'
 
@@ -92,4 +89,17 @@ return require('packer').startup(function(use)
 
 	-- 42header
 	use '42Paris/42header'
+
+	-- color #FF00FF
+	use 'norcalli/nvim-colorizer.lua'
+
+	-- tab rich
+	use 'romgrk/barbar.nvim'
+	use 'nvim-tree/nvim-web-devicons'
+
+	-- 括弧の自動補完
+	use 'jiangmiao/auto-pairs'
+
+	-- Git
+	use 'dinhhuy258/git.nvim'
 end)
